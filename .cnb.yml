@@ -1,4 +1,4 @@
-main:
+$:
   push:
     - services:
         - docker
