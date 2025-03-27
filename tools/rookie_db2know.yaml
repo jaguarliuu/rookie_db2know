@@ -21,12 +21,6 @@ parameters:
           en_US: MySQL
         value: mysql
       - label:
-          en_US: Oracle
-        value: oracle
-      - label:
-          en_US: SQLServer
-        value: sqlserver
-      - label:
           en_US: PostgreSQL
         value: postgresql
     label:
@@ -104,6 +98,20 @@ parameters:
       zh_Hans: 表名(逗号分隔)
     llm_description: Table names
     form: form
+  - name: chat_model # the name of the model parameter
+    type: model-selector # model-type
+    scope: llm # the scope of the parameter
+    form: form
+    required: true
+    label:
+      en_US: Model
+      zh_Hans: 模型
+      pt_BR: Model
+    human_description:
+      en_US: LLM model for text2data.
+      zh_Hans: LLM model for text2data.
+      pt_BR: LLM model for text2data.
+    llm_description: LLM model for text2dat
   - name: embedding_model
     type: model-selector
     scope: text-embedding

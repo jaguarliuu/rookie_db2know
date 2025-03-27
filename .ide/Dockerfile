@@ -3,7 +3,7 @@ FROM python:3.13.0
 # RUN apt-get update && apt-get install -y git
 
 # 下载插件并设置权限，重命名后复制到系统路径
-RUN wget https://github.com/langgenius/dify-plugin-daemon/releases/download/0.0.5/dify-plugin-linux-amd64 -O /tmp/dify-plugin-linux-amd64 && \
+RUN wget https://github.com/langgenius/dify-plugin-daemon/releases/download/0.0.6/dify-plugin-linux-amd64 -O /tmp/dify-plugin-linux-amd64 && \
     chmod +x /tmp/dify-plugin-linux-amd64 && \
     mv /tmp/dify-plugin-linux-amd64 /usr/local/bin/dify
 
@@ -15,6 +15,7 @@ RUN curl -fsSL https://code-server.dev/install.sh | sh \
   && code-server --install-extension ygqygq2.turbo-file-header \
   && code-server --install-extension tencent-cloud.coding-copilot \
   && code-server --install-extension eamodio.gitlens \
+  && code-server --install-extension samuelcolvin.jinjahtml \
   && echo done
 
 # 安装 ssh 服务，用于支持 VSCode 客户端通过 Remote-SSH 访问开发环境
