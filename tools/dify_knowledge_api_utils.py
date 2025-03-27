@@ -78,7 +78,7 @@ class DifyKnowledgeRequest:
                 "mode": "custom",
                 "rules": {
                     "pre_processing_rules": [{"id": "remove_extra_spaces", "enabled": True}],
-                    "segmentation": {"separator": "\\n", "max_tokens": 2000, "chunk_overlap": 400}
+                    "segmentation": {"separator": "******", "max_tokens": 2000, "chunk_overlap": 400}
                 }
             },
             "retrieval_model": {
